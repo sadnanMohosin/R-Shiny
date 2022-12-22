@@ -12,7 +12,7 @@ function(input, output,session){
     return(aggData)
     
   })
-output$updateData = renderDT(datatable(dataAggregation()))
+output$updatedData = renderDT(datatable(dataAggregation()))
 output$updatedPlot = renderPlot({
   ggplot(data = dataAggregation(),aes(x=SalesPerson,y=totalSales,fill=SalesPerson))+ geom_col()
 })
